@@ -7,7 +7,12 @@ require('dotenv').config()
 const port = process.env.PORT || 5000;
 
 //middleware
-app.use(cors());
+app.use(cors({
+    origin: [
+        // 'http://localhost:5173',
+        'https://bejewelled-beijinho-fd27c8.netlify.app/'
+    ],
+}));
 app.use(express.json());
 
 //bistroBoss
